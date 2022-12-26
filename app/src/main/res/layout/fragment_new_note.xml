@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.NewNoteFragment">
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/hint_title"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="400dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/note" />
+
+        <RadioButton
+            android:id="@+id/radioButtonIdea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/idea" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/todo_text" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="626dp"
+        android:text="@string/cancel_button" />
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="263dp"
+        android:layout_marginTop="625dp"
+        android:text="@string/ok_button" />
+
+    <TextView
+        android:id="@+id/textNewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="384dp"
+        android:visibility="gone"
+        android:text="@string/date"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNewDay"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:ems="10"
+        android:hint="dd"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/slash1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:text="@string/slash"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/editNewMonth"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:ems="10"
+        android:hint="mm"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/slash2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:text="@string/slash"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/editNewYear"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:ems="10"
+        android:hint="yyyy"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/textNewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="307dp"
+        android:layout_marginTop="384dp"
+        android:visibility="gone"
+        android:text="Time"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNewHr"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="309dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:ems="10"
+        android:hint="hh"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/colon1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:text="@string/colon"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/editNewMin"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="347dp"
+        android:layout_marginTop="413dp"
+        android:visibility="gone"
+        android:ems="10"
+        android:hint="mm"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textAlarmIdea"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="383dp"
+        android:visibility="gone"
+        android:text="We can help you develop your idea by sending you reminders daily or weekly"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAlarmIdea"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="464dp"
+        android:visibility="gone"
+        android:button="@drawable/button_type"
+        android:text="send a reminder a day before"
+        android:typeface="monospace" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="440dp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmDaily"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Daily"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAlarmWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Weekly"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewWeekly"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="544dp"
+        android:visibility="gone"
+        android:text="Mon  Tue  Wed  Thu  Fri   Sat   Sun"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSun"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="511dp"
+        android:button="@drawable/button_type"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="510dp"
+        android:button="@drawable/button_type"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTue"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="194dp"
+        android:layout_marginTop="509dp"
+        android:button="@drawable/button_type"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWed"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="510dp"
+        android:button="@drawable/button_type"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxThur"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="263dp"
+        android:layout_marginTop="511dp"
+        android:button="@drawable/button_type"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFri"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="297dp"
+        android:layout_marginTop="510dp"
+        android:visibility="gone"
+        android:button="@drawable/button_type" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSat"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="333dp"
+        android:layout_marginTop="511dp"
+        android:visibility="gone"
+        android:button="@drawable/button_type" />
+
+</FrameLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.pixie.note7.fragment.MainFragment"
+        android:label="@string/main_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_NewNoteFragment"
+            app:destination="@id/NewNoteFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_ShowNoteFragment"
+            app:destination="@id/ShowNoteFragment" />
+        <action
+            android:id="@+id/open_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NewNoteFragment"
+        android:name="com.pixie.note7.fragment.NewNoteFragment"
+        android:label="@string/add_new_note"
+        tools:layout="@layout/fragment_new_note">
+
+        <action
+            android:id="@+id/action_NewNoteFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/open_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ShowNoteFragment"
+        android:name="com.pixie.note7.fragment.ShowNoteFragment"
+        android:label="ShowNote"
+        tools:layout="@layout/fragment_show_note">
+
+        <argument
+            android:name="num"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_ShowNoteFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_ShowNoteFragment_to_EditNoteFragment"
+            app:destination="@id/EditNoteFragment" />
+        <action
+            android:id="@+id/open_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditNoteFragment"
+        android:name="com.pixie.note7.fragment.EditNoteFragment"
+        android:label="EditNote"
+        tools:layout="@layout/fragment_edit_note">
+
+        <argument
+            android:name="num"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_EditNoteFragment_to_ShowNoteFragment"
+            app:destination="@id/ShowNoteFragment" />
+        <action
+            android:id="@+id/open_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.pixie.note7.fragment.SettingsFragment"
+        android:label="@string/setting_fragment_label">
+
+    </fragment>
+
+</navigation>
